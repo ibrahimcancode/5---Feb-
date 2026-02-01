@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Baby!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Happy Birthday, Saleha  My LOVE! </h1>
+        <p class="subtitle">A special surpris from your Man ,  Yeh chhota sa surprise just to make you smile . Click the heart below for a little magic!</p>
+        <div class="balloons">
+            <div class="balloon" style="animation-delay: 0s;">🎈</div>
+            <div class="balloon" style="animation-delay: 1s;">🎈</div>
+            <div class="balloon" style="animation-delay: 2s;">🎈</div>
+        </div>
+        <div class="heart" onclick="revealSurprise()">❤️</div>
+        <div id="surprise" class="hidden"> HEYYYYYYYY CUTIEEEEE Haappy Birthday 
+            I dont even imagine k some one like you will walk in my life and i fell in love this much , i love you so much ! Let's make more memories. 💖</div>
+
+    <div class="gallery">
+        
+    <img src="images/images/photo1.jpeg" alt="Ur Pic" class="sticker" onclick="showCaption('seaxy Look🎀')">
+     <img src="images/images/photo3.jpeg" alt="Ur Pic" class="sticker" onclick="showCaption('seaxy Look🎀')">
+
+    </div>
+
+        <nav>
+            <a href="memories.html">Memories</a> |
+            <a href="interactive.html">Fun Time</a> |
+            <a href="wishes.html">Wishes</a> |
+            <a href="about.html">About Us</a>
+        </nav>
+    </div>
+    <button onclick="playBgMusic()">Play Music 🎧</button>
+
+    <audio id="bgMusic" loop>
+        <source src="music/sugarcrash2.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+        <div id="heart-container"></div>
+<script>
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.innerHTML = "❤️";
+  heart.style.position = "fixed";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.bottom = "-20px";
+  heart.style.fontSize = Math.random() * 20 + 20 + "px";
+  heart.style.opacity = Math.random();
+  heart.style.animation = "floatUp 6s linear";
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 6000);
+}
+
+setInterval(createHeart, 600);
+</script>
+
+
+</body>
+</html>
